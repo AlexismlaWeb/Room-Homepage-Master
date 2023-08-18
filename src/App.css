@@ -1,38 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
 .App {
-  text-align: center;
+  font-family: "League Spartan";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_container {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  color: hsl(0, 0%, 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header_menu {
+  flex-direction: row;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title_header {
+  font-weight: 500;
+  width: 20%;
+  margin-inline-end: 2%;
+}
+
+.caroussel_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header_items {
+  cursor: pointer;
+}
+
+.header_items:hover {
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+.flex-align-justify-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.bio_side_content {
+  height: 99.3%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.button_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.shop_now {
+  letter-spacing: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.shop_now:hover {
+  color: hsl(0, 0%, 63%);
+}
+
+.paragraphe_content p {
+  /* font-size: 14px; */
+  color: hsl(0, 0%, 27%);
+  line-height: 150%;
+}
+
+.title_content {
+  font-size: 150%;
+}
+
+.caroussel_group_button {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.button_container_angle {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 85%;
+  width: 11.8%;
+  background-color: hsl(0, 0%, 0%);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button_container_angle:hover {
+  background-color: hsl(0, 0%, 27%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bio_group {
+  height: 80%;
+}
+
+.image_sides img {
+  height: 65.5vh;
+  width: 60vw;
+}
+
+.ok {
+  width: 70%;
+  display: flex;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom_side_container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 99.3%;
+}
+
+.image_bottom_container {
+  width: 30%;
+}
+
+.image_bottom_container img {
+  width: 100%;
+}
+
+.bottom_bio_container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio_content {
+  width: 80%;
+}
+
+.bio_content h3 {
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.bio_content p {
+  color: hsl(0, 0%, 27%);
+  line-height: 140%;
+}
+
+@media (max-width: 500px) {
+  .caroussel_container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .image_sides img {
+    width: 100%;
+  }
+
+  .header_menu {
+    display: none;
+  }
+
+  .header_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .caroussel_group_button {
+    position: absolute;
+    top: 55vh;
+    left: 65%;
+    width: 150%;
+    height: 7%;
+  }
+
+  .button_container_angle img {
+    width: 15%;
+  }
+
+  .title_content {
+    font-size: 100%;
+  }
+
+  .bio_group {
+    width: 80%;
+    padding-block: 10%;
+  }
+
+  .ok {
+    width: 100%;
+  }
+
+  .bottom_side_container {
+    flex-direction: column;
+  }
+
+  .image_bottom_container {
+    width: 100%;
+  }
+
+  .bottom_bio_container {
+    width: 100%;
+    margin-block: 5%;
+  }
+
+  .paragraphe_content p {
+    font-size: small;
+  }
+
+  .bio_content p {
+    font-size: small;
   }
 }
