@@ -182,9 +182,9 @@
   .caroussel_group_button {
     position: absolute;
     top: 57.8vh;
-    left: 65%;
-    width: 150%;
     height: 7%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .button_container_angle img {
