@@ -20,7 +20,6 @@
 }
 
 .title_header {
-  font-weight: 500;
   width: 20%;
   margin-inline-end: 2%;
 }
@@ -169,14 +168,55 @@
     width: 100%;
   }
 
+  .header_items {
+    display: flex;
+    color: black;
+    font-weight: 700;
+  }
+
   .header_menu {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    z-index: 0;
+  }
+
+  .background {
+    background-color: white;
+  }
+
+  .header_menu_mobile {
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .flex_start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+    width: 95vw;
+  }
+
+  .display_none {
     display: none;
   }
 
   .header_container {
-    width: 100%;
+    width: 100vw;
+    height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .title_header {
+    width: 60vw;
+    margin-inline-end: 20%;
+  }
+
+  .title_header h1 {
+    font-weight: 100;
   }
 
   .caroussel_group_button {

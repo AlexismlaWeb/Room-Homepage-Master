@@ -9,11 +9,14 @@ import About_light from "../src/images/image-about-light.jpg";
 import icon_arrow from "../src/images/icon-arrow.svg";
 import icon_angle_left from "../src/images/icon-angle-left.svg";
 import icon_angle_right from "../src/images/icon-angle-right.svg";
+import icon_menu from "../src/images/icon-hamburger.svg";
+import icon_close from "../src/images/icon-close.svg";
 
 function App() {
   const array = [Desk_image_hero_1, Desk_image_hero_2, Desk_image_hero_3];
 
   const [image, setImage] = useState(0);
+  const [show, setShow] = useState(false);
 
   const HandleClickNext = (index) => {
     if (index !== array.length - 1) {
@@ -36,23 +39,30 @@ function App() {
     console.log(array.length);
   };
 
+  const handleShow = () => {
+    setShow(!show);
+  };
+
   return (
     <div className="App">
       <div className="header_container ">
         <div className="title_header flex-align-justify-center">
           <h1>room</h1>
         </div>
-        <div className="header_menu">
-          <div className="header_items">
+        <div className={`header_menu ${show ? "background" : "flex_start"}`}>
+          <div className="header_menu_mobile" onClick={() => handleShow()}>
+            <img src={!show ? icon_menu : icon_close} alt="icon menu" />
+          </div>
+          <div className={!show ? "display_none" : "header_items"}>
             <p>home</p>
           </div>
-          <div className="header_items">
+          <div className={!show ? "display_none" : "header_items"}>
             <p>shop</p>
           </div>
-          <div className="header_items">
+          <div className={!show ? "display_none" : "header_items"}>
             <p>about</p>
           </div>
-          <div className="header_items">
+          <div className={!show ? "display_none" : "header_items"}>
             <p>contact</p>
           </div>
         </div>
