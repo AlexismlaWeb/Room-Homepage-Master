@@ -4,6 +4,10 @@
   font-family: "League Spartan";
 }
 
+.header_menu_mobile {
+  display: none;
+}
+
 .header_container {
   display: flex;
   flex-direction: row;
@@ -186,6 +190,7 @@
   }
 
   .header_menu_mobile {
+    display: block;
     cursor: pointer;
     z-index: 1;
   }
